@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated login Form</title>
+  <link rel="stylesheet" href="style_1.css">
+</head>
+
+<body>
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text" id="username" required />
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="password" required />
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="pass">Forget Password?</div>
+
+      <input type="button" value="Login" class="login-btn" onclick="func()" />
+      <div class="signup_link">Not a member?<a href="#">Signup</a></div>
+    </form>
+  </div>
+  <script>
+    function func() {
+      var text = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+      if (text === "sai123" && pass === "123456") {
+
+        setTimeout(function() { window.location.href = 'index.html'; }, 0);
+      }
+      else {
+        alert("Wrong entry invalid");
+      }
+    }
+  </script>
+</body>
+
+</html>
